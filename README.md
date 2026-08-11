@@ -171,23 +171,17 @@ condiciones del equipo.
 
 ## 9. Conclusión
 
-El experimento permite validar una diferencia de rendimiento entre las
-dos implementaciones.
+El experimento permitió comprobar una diferencia de rendimiento entre las implementaciones realizadas en C y Python. En las cinco pruebas realizadas, C obtuvo un menor tiempo de ejecución que Python.
 
-Para el problema de la suma de la serie armónica, C obtuvo tiempos
-menores que Python en los cinco tamaños evaluados. Python presentó
-tiempos entre 13,07 y 23,52 veces mayores que C según el tamaño de
-entrada.
+Cuando decimos que Python tardó entre 13,07 y 23,52 veces más que C, no significa que Python haya tardado 13 o 23 segundos. Se refiere a una comparación entre los tiempos. Por ejemplo, para 1.000.000 de términos, C tardó aproximadamente 0,001897 segundos, mientras que Python tardó aproximadamente 0,024801 segundos. Al dividir el tiempo de Python entre el de C obtenemos aproximadamente 13,07. Es decir, para esa prueba, Python necesitó unas 13 veces el tiempo que necesitó C para realizar el mismo cálculo.
 
-Ambas implementaciones tienen la misma complejidad temporal O(n) y
-produjeron los mismos resultados numéricos. Por lo tanto, la diferencia
-observada no se explica por una diferencia en el algoritmo, sino por el
-costo de ejecución asociado a cada implementación y al entorno
-utilizado.
+En la prueba de 10.000.000 de términos se obtuvo la mayor diferencia: C tardó aproximadamente 0,010108 segundos y Python 0,237731 segundos, por lo que Python necesitó unas 23,52 veces el tiempo de C.
 
-La conclusión debe limitarse a las condiciones de este experimento. No
-se puede afirmar a partir de estas pruebas que C sea siempre más rápido
-que Python en cualquier programa.
+También se comprobó que ambas implementaciones producen el mismo resultado numérico y tienen una complejidad temporal O(n). Por lo tanto, la diferencia de tiempo observada no se debe a que estén resolviendo problemas diferentes, sino a la forma en que cada lenguaje ejecuta el programa.
+
+Aunque C presentó un mejor rendimiento en este experimento, Python tiene como ventaja que generalmente permite escribir programas de forma más sencilla y rápida, utilizando una sintaxis más fácil de leer y una gran cantidad de bibliotecas disponibles. Por esta razón, la elección entre C y Python depende de lo que se necesite: C puede ser conveniente cuando el rendimiento es muy importante, mientras que Python puede facilitar el desarrollo cuando se busca escribir y probar soluciones de manera más rápida.
+
+Finalmente, estos resultados corresponden únicamente al problema y a las condiciones utilizadas en este experimento. No se puede afirmar que C sea siempre más rápido que Python para cualquier tipo de programa.
 
 ## 10. Requisitos
 
@@ -238,17 +232,6 @@ Tarea_1_Lenguajes/
 │   ├── graficar_resultados.py
 │   ├── comparacion_rendimiento.png
 │   └── comparacion_rendimiento_log.png
-
-## 13. Nota sobre reproducibilidad
-
-Los resultados incluidos en `resultados/resultados.csv` corresponden a
-la ejecución realizada en Ubuntu Linux dentro de VirtualBox durante el
-desarrollo de este trabajo.
-
-Si el experimento se ejecuta nuevamente, los tiempos pueden cambiar. Lo
-esperado es conservar la tendencia general, pero no necesariamente los
-mismos valores exactos.
-
 Para una nueva medición se recomienda cerrar programas innecesarios,
 mantener las mismas cantidades de n y utilizar las mismas opciones de
 compilación.
