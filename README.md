@@ -232,6 +232,3 @@ Tarea_1_Lenguajes/
 │   ├── graficar_resultados.py
 │   ├── comparacion_rendimiento.png
 │   └── comparacion_rendimiento_log.png
-Para una nueva medición se recomienda cerrar programas innecesarios,
-mantener las mismas cantidades de n y utilizar las mismas opciones de
-compilación.
